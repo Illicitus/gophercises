@@ -57,7 +57,7 @@ func main() {
 			log.Fatalln("Can't read file", err)
 		}
 
-		// Aks question and check answer
+		// Ask question and check answer
 		fmt.Print(record[0], " =", " ")
 		cr := record[1]
 		an := strings.TrimRight(consoleReader(), "\n")
