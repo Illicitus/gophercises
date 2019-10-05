@@ -16,16 +16,16 @@ type count struct {
 	total int
 }
 
-// Read unser from console and return it
+// Read anser from console and return it
 func consoleReader() string {
 	r := bufio.NewReader(os.Stdin)
-	un, err := r.ReadString('\n')
+	an, err := r.ReadString('\n')
 
 	if err != nil {
 		log.Fatalln("Input error", err)
 	}
 
-	return un
+	return an
 }
 
 func main() {
@@ -57,17 +57,17 @@ func main() {
 			log.Fatalln("Can't read file", err)
 		}
 
-		// Aks question and check unswer
+		// Aks question and check answer
 		fmt.Print(record[0], " =", " ")
 		cr := record[1]
-		un := strings.TrimRight(consoleReader(), "\n")
+		an := strings.TrimRight(consoleReader(), "\n")
 
-		if un == cr {
+		if an == cr {
 			c.right++
 		}
 
 		c.total++
 
 	}
-	fmt.Println("Correct unswers: ", c.right, "Total unswers: ", c.total)
+	fmt.Println("Correct answers: ", c.right, "Total answers: ", c.total)
 }
