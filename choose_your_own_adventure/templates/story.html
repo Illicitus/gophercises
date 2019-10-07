@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="urf-8">
+    <title>
+        <h2>Choose your adventure</h2>
+    </title>
+</head>
+
+<body>
+    <h1>{{.Title}}</h1>
+    {{range .Story}}
+    <p>{{.}}</p>
+    {{end}}
+    <ul>
+        {{range .Options}}
+        <li>
+            <a href="/{{.Arc}}">{{.Text}}</a>
+        </li>
+        {{end}}
+    </ul>
+</body>
+
+</html>
