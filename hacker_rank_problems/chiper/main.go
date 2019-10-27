@@ -39,9 +39,8 @@ func indexNormilize(k int32) int32 {
 		result := k - 26
 		if result >= 26 {
 			return indexNormilize(result)
-		} else {
-			return result
 		}
+		return result
 	}
 	return k
 }
